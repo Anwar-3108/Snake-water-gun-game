@@ -27,7 +27,7 @@ return "cpu won" ;
     }
     }
   let result =  match(cpu ,user) ;
-  let showw =document.getElementById("show").innerHTML=`Result : ${result}`
+  let showw =document.getElementById("show").innerHTML=`CPU '${cpu}' and USER '${user}'   \n  |  Result : ${result}`
   
 // document.write() ;
 
