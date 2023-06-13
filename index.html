@@ -3,64 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luckey Dice</title>
-    <link rel="stylesheet" href="dice.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Acme&family=Hind+Siliguri:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>TimeWave</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1 id="heading">Luckey Dice</h1>
-        <div class="dice">
-            <p>YOU</p>
-            <div class="img">
+        <div class="watch">
+            <div class="outer-circle">
+                <div class="inner-circle">
+                    <span class="text min">0  : </span>
+                    <span class="text sec">&nbsp; 0  : </span>
+                    <span class="text ms"> &nbsp; 0  </span>
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <button class="button reset  hidden">Reset</button>
+                <button class="button play">Play</button>
+                <button class="button lap hidden">Lap</button>
 
-                <img src="./images/d1.png" alt="1" id="check1">
             </div>
         </div>
-        <div class="dice">
-            <p>COMPUTER</p>
-            <div class="img">
+        <ul class="laps">
 
-                <img src="./images/d2.png" alt="1" id="check2">
-            </div>
-        </div>
-        <div class="btn">
-
-            <button onclick="play()">CLICK ME</button>
-        </div>
-        
+           
+            <button class="clear-lap-button hidden">Clear All</button>
+        </ul>
     </div>
-    <script>
-        const play=()=>{
-
-      
-
-
-        const player =Math.floor(Math.random()*6+1) ;
-        const computer =Math.floor(Math.random()*6+1) ;
-
-        const playerDice = `./images/d${player}.png` ;
-        
-        const computerDice = `./images/d${computer}.png` ;
-
-        document.getElementById("check1").setAttribute('src' , playerDice)
-
-        document.getElementById("check2").setAttribute('src' , computerDice)
-
-
-        if(player>computer){
-            document.getElementById("heading").innerHTML="YOU WON!"; 
-
-        }else if(player<computer){
-            document.getElementById("heading").innerHTML="COMPUTER WON!";
-        }else{
-            document.getElementById("heading").innerHTML="DRAW!";
-        }
-
-
-    }
-    </script>
+    
+    <script src="logic.js"></script>
 </body>
 </html>
